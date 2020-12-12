@@ -6,7 +6,7 @@ import Meal from "../meal";
 function MenuList(props){
 
     const mealsList = props.meals.map(meal =>(
-        <Meal name={meal.name} description={meal.description} price={meal.price}/>
+        <Meal name={meal.name} description={meal.description} price={meal.price} quantity={meal.quantity}/>
     ));
 
     return (

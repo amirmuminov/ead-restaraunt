@@ -15,6 +15,8 @@ function Meal(props){
                 <span>{props.name}</span>
                 <p>{props.description}</p>
                 <span>{props.price} KZT</span>
+                <br/>
+                <span>Quantity: {props.quantity}</span>
             </Card>
         </Col>
     );

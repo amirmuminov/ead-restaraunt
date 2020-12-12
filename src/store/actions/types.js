@@ -14,3 +14,6 @@ export const ADD_ORDER = 'ADD_ORDER';
 export const PAY_ORDER = 'PAY_ORDER';
 export const GET_MEALS = 'GET_MEALS';
 export const CANCEL_ORDER = 'CANCEL_ORDER';
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
+export const SIGN_UP = 'SIGN_UP';

@@ -17,3 +17,6 @@ export const CANCEL_ORDER = 'CANCEL_ORDER';
 export const LOGIN = 'LOGIN';
 export const LOGOUT = 'LOGOUT';
 export const SIGN_UP = 'SIGN_UP';
+export const ADD_DELIVERY = 'ADD_DELIVERY';
+export const FINISH_DELIVERY = 'FINISH_DELIVERY';
+export const GET_DELIVERIES = 'GET_DELIVERIES';

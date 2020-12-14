@@ -11,11 +11,9 @@ const initialState = {
 export default function (state=initialState, action) {
     switch (action.type) {
         case LOGIN:
-            let token = action.payload.splice(6, action.payload.length);
             const access_token = jwt_decode(action.payload);
             localStorage.setItem("username", access_token.sub);
             localStorage.setItem("authorities", access_token.authorities)
-
                 axios.defaults.headers.common["Authorization"] = action.payload;
                 return{
                     ...state,

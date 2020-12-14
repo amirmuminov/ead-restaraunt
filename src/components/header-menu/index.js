@@ -20,6 +20,9 @@ function HeaderMenu(){
             <Menu.Item key="orders">
                 <Link to="/orders">Order</Link>
             </Menu.Item>
+            <Menu.Item key="delivery">
+                <Link to="/delivery">Delivery</Link>
+            </Menu.Item>
         </Menu>
     );
 }

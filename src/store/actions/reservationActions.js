@@ -2,7 +2,7 @@ import {ADD_RESERVATION, ADD_TABLE, GET_RESERVATIONS, GET_TABLES} from './types'
 import axios from 'axios';
 
 export const getTables = () => dispatch => {
-    axios.get('http://localhost:8084/table/list')
+    axios.get('http://localhost:8762/table/list')
         .then(response => {
             dispatch({
                 type: GET_TABLES,
@@ -14,7 +14,7 @@ export const getTables = () => dispatch => {
 
 
 export const getReservations = () => dispatch => {
-    axios.get("http://localhost:8084/reservation/list")
+    axios.get("http://localhost:8762/reservation/list")
         .then(response =>
             dispatch({
                 type: GET_RESERVATIONS,
@@ -25,7 +25,7 @@ export const getReservations = () => dispatch => {
 };
 
 export const addTable = (table) => dispatch => {
-    axios.post("http://localhost:8084/table", table)
+    axios.post("http://localhost:8762/table", table)
         .then(response =>
             dispatch({
                 type: ADD_TABLE,
@@ -36,7 +36,7 @@ export const addTable = (table) => dispatch => {
 };
 
 export const addReservation = (reservation) => dispatch => {
-    axios.post("http://localhost:8084/reservation", reservation)
+    axios.post("http://localhost:8762/reservation", reservation)
         .then(response =>
             dispatch({
                 type: ADD_RESERVATION,

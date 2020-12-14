@@ -2,7 +2,7 @@ import {ADD_ORDER, CANCEL_ORDER, GET_ORDERS, PAY_ORDER} from './types';
 import axios from 'axios';
 
 export const getOrders = () => dispatch => {
-    axios.get('http://localhost:8083/order/list')
+    axios.get('http://localhost:8762/order/list')
         .then(response => {
             dispatch({
                 type: GET_ORDERS,
@@ -13,7 +13,7 @@ export const getOrders = () => dispatch => {
 };
 
 export const addOrder = (order) => dispatch => {
-    axios.post("http://localhost:8083/order", order)
+    axios.post("http://localhost:8762/order", order)
         .then(response =>
             dispatch({
                 type: ADD_ORDER,
@@ -24,7 +24,7 @@ export const addOrder = (order) => dispatch => {
 };
 
 export const cancelOrder = (id) => dispatch => {
-    axios.put(`http://localhost:8083/order/cancel/${id}`)
+    axios.put(`http://localhost:8762/order/cancel/${id}`)
         .then(response =>
             dispatch({
                 type: CANCEL_ORDER,
@@ -35,7 +35,7 @@ export const cancelOrder = (id) => dispatch => {
 };
 
 export const payOrder = (id) => dispatch => {
-    axios.put(`http://localhost:8083/order/bill/${id}`)
+    axios.put(`http://localhost:8762/order/bill/${id}`)
         .then(response =>
             dispatch({
                 type: PAY_ORDER,

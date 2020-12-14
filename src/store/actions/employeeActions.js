@@ -2,7 +2,7 @@ import {ADD_EMPLOYEE, GET_EMPLOYEES} from './types';
 import axios from 'axios';
 
 export const getEmployees = () => dispatch => {
-    axios.get('http://localhost:8082/employee/list')
+    axios.get('http://localhost:8762/employee/list')
         .then(response => {
             dispatch({
                 type: GET_EMPLOYEES,
@@ -14,7 +14,7 @@ export const getEmployees = () => dispatch => {
 
 
 export const addEmployee = employee => dispatch => {
-    axios.post("http://localhost:8082/employee", employee)
+    axios.post("http://localhost:8762/employee", employee)
         .then(response =>
             dispatch({
                 type: ADD_EMPLOYEE,

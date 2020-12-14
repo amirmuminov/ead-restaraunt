@@ -14,6 +14,7 @@ function EmployeeAddModal(props){
         firstName: '',
         lastName: '',
         birthDate: '',
+        password: '',
         salary: 0
     });
 
@@ -54,6 +55,13 @@ function EmployeeAddModal(props){
                     rules={[{ required: true, message: 'Please input last name!' }]}
                 >
                     <Input onChange={onchange} value={employee.lastName} name="lastName"/>
+                </Form.Item>
+                <Form.Item
+                    label="Password"
+                    name="password"
+                    rules={[{ required: true, message: 'Please input password!' }]}
+                >
+                    <Input.Password onChange={onchange} value={employee.password} name="password"/>
                 </Form.Item>
                 <Form.Item
                     label="Birth Date"

@@ -2,7 +2,7 @@ import {ADD_MEAL, GET_MENUS, ADD_MENU, GET_MEALS_WITHOUT_MENU, ADD_MEALS_TO_MENU
 import axios from 'axios';
 
 export const getMenus = () => dispatch => {
-    axios.get('http://localhost:8081/menu/list')
+    axios.get('http://localhost:8762/menu/list')
         .then(response => {
             dispatch({
                 type: GET_MENUS,
@@ -13,7 +13,7 @@ export const getMenus = () => dispatch => {
 };
 
 export const getMealsWithoutMenu = () => dispatch => {
-    axios.get('http://localhost:8081/meal/nomenu')
+    axios.get('http://localhost:8762/meal/nomenu')
         .then(response => {
             dispatch({
                 type: GET_MEALS_WITHOUT_MENU,
@@ -24,7 +24,7 @@ export const getMealsWithoutMenu = () => dispatch => {
 };
 
 export const getMeals = () => dispatch => {
-    axios.get('http://localhost:8081/meal/list')
+    axios.get('http://localhost:8762/meal/list')
         .then(response => {
             dispatch({
                 type: GET_MEALS,
@@ -35,7 +35,7 @@ export const getMeals = () => dispatch => {
 };
 
 export const addMeal = meal => dispatch => {
-    axios.post("http://localhost:8081/meal", meal)
+    axios.post("http://localhost:8762/meal", meal)
         .then(response =>
             dispatch({
                 type: ADD_MEAL,
@@ -46,7 +46,7 @@ export const addMeal = meal => dispatch => {
 };
 
 export const addMenu = menu => dispatch => {
-    axios.post("http://localhost:8081/menu", menu)
+    axios.post("http://localhost:8762/menu", menu)
         .then(response =>
             dispatch({
                 type: ADD_MENU,
@@ -58,7 +58,7 @@ export const addMenu = menu => dispatch => {
 
 export const addMealsToMenu = (addMealsToMenuList, menuId) => dispatch => {
     console.log(addMealsToMenuList);
-    axios.put(`http://localhost:8081/menu/${menuId}`, addMealsToMenuList)
+    axios.put(`http://localhost:8762/menu/${menuId}`, addMealsToMenuList)
         .then(response =>
             dispatch({
                 type: ADD_MEALS_TO_MENU,

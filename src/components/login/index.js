@@ -18,8 +18,8 @@ function Login(props){
     }, [props.authReducer.isSignUpSuccess]);
 
     const userLoggedOut = (
-        <ul className="upper-nav-list">
-            <li onClick={() => setLoginModalVisibility(true)}>Login</li>
+        <ul className="upper-nav-list" style={{display: "flex", listStyle: "none"}}>
+            <li onClick={() => setLoginModalVisibility(true)} style={{marginRight: 30}}>Login</li>
             <li onClick={() => setRegistrationModalVisibility(true)}>Sign up</li>
         </ul>
     );
